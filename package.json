@@ -1,0 +1,128 @@
+{
+    "name": "authentiksystemsapp",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "android": "react-native run-android",
+        "test": "jest",
+        "start": "node node_modules/react-native/local-cli/cli.js start",
+        "start:noCache": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+        "lint": "eslint .",
+        "commit": "git cz",
+        "ios": "react-native run-ios",
+        "install-dep": "bash ./scripts/install.sh",
+        "storybook": "storybook start",
+        "build-and": "cp fixbug1.js ./node_modules/loglevel-file-logger/dist/FetchBlobWriter.js && cp fixbug.js ./node_modules/@incpad/validator/index.js && react-native run-android --variant=release"
+    },
+    "dependencies": {
+        "@ant-design/react-native": "3.3.0",
+        "@incpad/base-tool": "1.0.26",
+        "@incpad/decorators": "1.0.22",
+        "@incpad/need": "1.0.22",
+        "@incpad/react-native-tools": "1.0.18",
+        "@lg2/react-native-eddystone": "github:zhangjunhou/react-native-eddystone",
+        "@react-native-community/async-storage": "1.9.0",
+        "@react-native-community/masked-view": "0.1.9",
+        "@react-native-community/netinfo": "5.7.1",
+        "@react-native-community/picker": "1.3.0",
+        "@react-native-community/push-notification-ios": "1.1.1",
+        "@remobile/react-native-toast": "1.0.7",
+        "axios": "0.19.2",
+        "buffer": "5.5.0",
+        "convert-string": "0.1.0",
+        "core-js": "2.6.5",
+        "date-fns": "1.30.1",
+        "deprecated-react-native-listview": "0.0.6",
+        "i18next": "19.7.0",
+        "latest": "^0.2.0",
+        "lodash.get": "4.4.2",
+        "loglevel-file-logger": "1.0.4",
+        "mobx": "5.15.7",
+        "prop-types": "15.7.2",
+        "react": "16.13.1",
+        "react-error-boundaries": "1.1.4",
+        "react-i18next": "11.7.3",
+        "react-native": "0.62.2",
+        "react-native-beacons-manager": "github:zhangjunhou/react-native-beacons-manager",
+        "react-native-ble-manager": "7.2.0",
+        "react-native-bluetooth-status": "1.5.0",
+        "react-native-dev-console": "github:zhangjunhou/react-native-dev-console",
+        "react-native-device-info": "5.5.4",
+        "react-native-device-log": "github:zhangjunhou/react-native-device-log",
+        "react-native-extended-stylesheet": "0.12.0",
+        "react-native-fetch-blob": "0.10.8",
+        "react-native-geocoder": "0.5.0",
+        "react-native-gesture-handler": "1.6.1",
+        "react-native-google-api-availability-bridge": "1.3.0",
+        "react-native-keyboard-aware-scroll-view": "0.9.1",
+        "react-native-location": "2.5.0",
+        "react-native-paper": "3.8.0",
+        "react-native-push-notification": "3.5.2",
+        "react-native-reanimated": "1.8.0",
+        "react-native-safe-area-context": "0.7.3",
+        "react-native-screens": "2.5.0",
+        "react-native-scrollable-tab-view": "1.0.0",
+        "react-native-sentry": "0.43.2",
+        "react-native-share": "3.2.0",
+        "react-native-size": "1.3.0",
+        "react-native-splash-screen": "3.2.0",
+        "react-native-storage": "1.0.1",
+        "react-native-svg": "12.1.0",
+        "react-native-svg-uri": "1.2.3",
+        "react-native-vector-icons": "7.1.0",
+        "react-navigation": "4.3.7",
+        "react-navigation-material-bottom-tabs": "2.2.10",
+        "react-navigation-stack": "1.10.3",
+        "rn-fetch-blob": "0.12.0"
+    },
+    "devDependencies": {
+        "@babel/core": "7.11.6",
+        "@babel/runtime": "7.11.2",
+        "@babel/plugin-proposal-class-properties": "7.8.3",
+        "@babel/plugin-proposal-decorators": "7.8.3",
+        "@babel/plugin-proposal-nullish-coalescing-operator": "7.8.3",
+        "@babel/plugin-proposal-optional-chaining": "7.9.0",
+        "@babel/plugin-transform-flow-strip-types": "7.9.0",
+        "@babel/plugin-transform-runtime": "7.9.0",
+        "@react-native-community/eslint-config": "0.0.5",
+        "@storybook/react-native": "5.3.18",
+        "babel-eslint": "10.1.0",
+        "babel-jest": "24.9.0",
+        "babel-plugin-transform-decorators-legacy": "1.3.5",
+        "cz-conventional-changelog": "3.1.0",
+        "eslint": "6.5.1",
+        "eslint-config-esnext": "4.0.0",
+        "eslint-plugin-react": "7.19.0",
+        "eslint-plugin-react-native": "3.8.1",
+        "husky": "4.2.5",
+        "jest": "24.9.0",
+        "lint-staged": "10.1.3",
+        "metro-react-native-babel-preset": "0.63.0",
+        "prettier": "2.0.4",
+        "react-native-svg-transformer": "0.14.3",
+        "react-test-renderer": "16.11.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "git add"
+        ]
+    },
+    "jest": {
+        "preset": "react-native"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "rnpm": {
+        "assets": [
+            "src/components/Icon"
+        ]
+    }
+}
